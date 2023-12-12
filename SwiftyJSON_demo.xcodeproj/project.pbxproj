@@ -14,6 +14,12 @@
 		D06774C52B29071300251200 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D06774C42B29071300251200 /* Assets.xcassets */; };
 		D06774C82B29071300251200 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D06774C62B29071300251200 /* LaunchScreen.storyboard */; };
 		D06774D12B2907D800251200 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = D06774D02B2907D800251200 /* SwiftyJSON */; };
+		D06774D52B291BC000251200 /* SwiftyJSON_demo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D06774D32B291BC000251200 /* SwiftyJSON_demo.xcdatamodeld */; };
+		D06798852B29211E005FC0E6 /* Commit+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06798812B29211E005FC0E6 /* Commit+CoreDataClass.swift */; };
+		D06798862B29211E005FC0E6 /* Commit+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06798822B29211E005FC0E6 /* Commit+CoreDataProperties.swift */; };
+		D06798872B29211E005FC0E6 /* Author+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06798832B29211E005FC0E6 /* Author+CoreDataClass.swift */; };
+		D06798882B29211E005FC0E6 /* Author+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06798842B29211E005FC0E6 /* Author+CoreDataProperties.swift */; };
+		D067988A2B2921B5005FC0E6 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06798892B2921B5005FC0E6 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +31,12 @@
 		D06774C42B29071300251200 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D06774C72B29071300251200 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D06774C92B29071300251200 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D06774D42B291BC000251200 /* SwiftyJSON_demo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SwiftyJSON_demo.xcdatamodel; sourceTree = "<group>"; };
+		D06798812B29211E005FC0E6 /* Commit+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Commit+CoreDataClass.swift"; sourceTree = "<group>"; };
+		D06798822B29211E005FC0E6 /* Commit+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Commit+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D06798832B29211E005FC0E6 /* Author+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Author+CoreDataClass.swift"; sourceTree = "<group>"; };
+		D06798842B29211E005FC0E6 /* Author+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Author+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D06798892B2921B5005FC0E6 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +70,12 @@
 		D06774BA2B29071200251200 /* SwiftyJSON_demo */ = {
 			isa = PBXGroup;
 			children = (
+				D06798892B2921B5005FC0E6 /* DetailViewController.swift */,
+				D06798832B29211E005FC0E6 /* Author+CoreDataClass.swift */,
+				D06798842B29211E005FC0E6 /* Author+CoreDataProperties.swift */,
+				D06798812B29211E005FC0E6 /* Commit+CoreDataClass.swift */,
+				D06798822B29211E005FC0E6 /* Commit+CoreDataProperties.swift */,
+				D06774D32B291BC000251200 /* SwiftyJSON_demo.xcdatamodeld */,
 				D06774BB2B29071200251200 /* AppDelegate.swift */,
 				D06774BD2B29071200251200 /* SceneDelegate.swift */,
 				D06774BF2B29071200251200 /* ViewController.swift */,
@@ -168,8 +186,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D067988A2B2921B5005FC0E6 /* DetailViewController.swift in Sources */,
+				D06798882B29211E005FC0E6 /* Author+CoreDataProperties.swift in Sources */,
+				D06774D52B291BC000251200 /* SwiftyJSON_demo.xcdatamodeld in Sources */,
 				D06774C02B29071200251200 /* ViewController.swift in Sources */,
+				D06798852B29211E005FC0E6 /* Commit+CoreDataClass.swift in Sources */,
 				D06774BC2B29071200251200 /* AppDelegate.swift in Sources */,
+				D06798872B29211E005FC0E6 /* Author+CoreDataClass.swift in Sources */,
+				D06798862B29211E005FC0E6 /* Commit+CoreDataProperties.swift in Sources */,
 				D06774BE2B29071200251200 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,6 +436,19 @@
 			productName = SwiftyJSON;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		D06774D32B291BC000251200 /* SwiftyJSON_demo.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D06774D42B291BC000251200 /* SwiftyJSON_demo.xcdatamodel */,
+			);
+			currentVersion = D06774D42B291BC000251200 /* SwiftyJSON_demo.xcdatamodel */;
+			path = SwiftyJSON_demo.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = D06774B02B29071200251200 /* Project object */;
 }

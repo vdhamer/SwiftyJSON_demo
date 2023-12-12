@@ -24,9 +24,9 @@ class ViewController: UITableViewController {
                                                             target: self,
                                                             action: #selector(changeFilter))
 
-        container = NSPersistentContainer(name: "Project38") // name of SQLite database
+        container = NSPersistentContainer(name: "SwiftyJSON_demo") // name of SQLite database
 
-        container.loadPersistentStores { storeDescription, error in // load or create database
+        container.loadPersistentStores { _, error in // load or create database
             self.container.viewContext.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
             if let error = error {
                 print("Unresolved error \(error)")
@@ -66,9 +66,9 @@ class ViewController: UITableViewController {
 
     // navigate to detail view
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let vc = storyboard?.instantiateViewController(withIdentifier: "Detail") as? DetailViewController {
-            vc.detailItem = githubCommits[indexPath.row]
-            navigationController?.pushViewController(vc, animated: true)
+        if let vController = storyboard?.instantiateViewController(withIdentifier: "Detail") as? DetailViewController {
+            vController.detailItem = githubCommits[indexPath.row]
+            navigationController?.pushViewController(vController, animated: true)
         }
     }
 
@@ -86,36 +86,36 @@ class ViewController: UITableViewController {
         }
     }
 
-    // Mark: - predicate stuff
+    // MARK: - predicate stuff
 
     @objc func changeFilter() {
-        let ac = UIAlertController(title: "Filter commits…", message: nil, preferredStyle: .actionSheet)
-        ac.popoverPresentationController?.sourceItem = navigationItem.rightBarButtonItem // for iPadOS
+        let alertCtrl = UIAlertController(title: "Filter commits…", message: nil, preferredStyle: .actionSheet)
+        alertCtrl.popoverPresentationController?.sourceItem = navigationItem.rightBarButtonItem // for iPadOS
 
-        ac.addAction(UIAlertAction(title: "Show only fixes", style: .default) { [unowned self] _ in
+        alertCtrl.addAction(UIAlertAction(title: "Show only fixes", style: .default) { [unowned self] _ in
             githubCommitPredicate = NSPredicate(format: "message CONTAINS[c] 'fix'")
             loadRecordsFromDatabase()
         })
-        ac.addAction(UIAlertAction(title: "Ignore Pull Requests", style: .default) { [unowned self] _ in
+        alertCtrl.addAction(UIAlertAction(title: "Ignore Pull Requests", style: .default) { [unowned self] _ in
             githubCommitPredicate = NSPredicate(format: "NOT message BEGINSWITH 'Merge pull request'")
             loadRecordsFromDatabase()
         })
-        ac.addAction(UIAlertAction(title: "Show only recent", style: .default) { [unowned self] _ in
+        alertCtrl.addAction(UIAlertAction(title: "Show only recent", style: .default) { [unowned self] _ in
             let twelveHoursAgo = Date().addingTimeInterval(-43200)
             githubCommitPredicate = NSPredicate(format: "date > %@", twelveHoursAgo as NSDate)
             loadRecordsFromDatabase()
         })
-        ac.addAction(UIAlertAction(title: "Show only DougGregor commits", style: .default) { [unowned self] _ in
+        alertCtrl.addAction(UIAlertAction(title: "Show only DougGregor commits", style: .default) { [unowned self] _ in
             self.githubCommitPredicate = NSPredicate(format: "author.name == 'Doug Gregor'")
             self.loadRecordsFromDatabase()
         })
-        ac.addAction(UIAlertAction(title: "Show all commits", style: .default) { [unowned self] _ in
+        alertCtrl.addAction(UIAlertAction(title: "Show all commits", style: .default) { [unowned self] _ in
             githubCommitPredicate = nil
             loadRecordsFromDatabase()
         })
 
-        ac.addAction(UIAlertAction(title: "Cancel", style: .cancel)) // automatically hidden on iPad
-        present(ac, animated: true)
+        alertCtrl.addAction(UIAlertAction(title: "Cancel", style: .cancel)) // automatically hidden on iPad
+        present(alertCtrl, animated: true)
     }
 
     // MARK: - moving data around
@@ -164,7 +164,7 @@ class ViewController: UITableViewController {
             DispatchQueue.main.async { [unowned self] in
                 for jsonGithubCommit in jsonGithubCommitArray {
                     let commit = Commit(context: self.container.viewContext) // create Commit object commit
-                    self.fillCommitFields(commit: commit, usingJSON: jsonGithubCommit) // populate Commit object properties
+                    self.fillCommitFields(commit: commit, usingJSON: jsonGithubCommit) // assign Commit properties
                 }
 
                 saveRecordsToDatabase(count: jsonGithubCommitArray.count)
@@ -191,6 +191,7 @@ class ViewController: UITableViewController {
         return formatter.string(from: Date(timeIntervalSince1970: 0))
     }
 
+    // swiftlint:disable line_length
     /* example of input for configure(). • means JSON tree has been partly collapsed.
      [
        {
@@ -214,6 +215,7 @@ class ViewController: UITableViewController {
        }
      ]
     */
+    // swiftlint:enable line_length
 
     func fillCommitFields(commit: Commit, usingJSON json: JSON) {
         commit.sha = json["sha"].stringValue
