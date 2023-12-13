@@ -20,6 +20,7 @@ There are minor changes compared to the original source code:
 The final set of changes in the stepwise tutorial for Project 38 are _not_ included here.
 I will put them in a separate repo. They add two features that Paul Hudson described as "optional":
 1. add Sections to the UITableView, with one section per author. This impacts the CoreData and UIKit part of the code.
-2. the interface CoreData > UITableView reads records on demand (lazy loading) rather than buffering all records in memory 
+2. the interface CoreData > UITableView reads records on demand (lazy loading) rather than buffering all records in memory
+
 The second modification shouldn't be relevant if you plan to use SwiftUI
 because the `List` and `ForEach` views together automatically provide lazy loading.
