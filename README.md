@@ -29,7 +29,7 @@ There are minor changes compared to the original source code:
 - changes to logging to the console and error handling. I deliberately used `fatalError()` instead of `print()` here and there, as this is not meant to be prduction code.
 - one of the filters now finds commits by Doug Gregor instead of Joe Groff. This increases the chance that the filter returns recent records. Joe Groff seems to have switched to other projects.
 
-The final code changes from the Hacking with Swift Project 38 are included in a separate repository. They add 2 advanced features that Paul Hudson described as "optional":
+The final code changes from the Hacking with Swift Project 38 are included in a separate repository. They add two advanced features that Paul Hudson described as "optional":
 1. adding **Sections** to the UITableView (grouping commits per author). This impacts the CoreData and UIKit part of the code.
 2. the interface CoreData > UITableView **reads records on demand** (lazy loading) rather than loading all records into memory up front.
 
