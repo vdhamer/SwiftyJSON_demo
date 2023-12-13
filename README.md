@@ -1,3 +1,5 @@
+![RocketSim_Screenshot_iPhone_SE_(3rd_generation)_2023-12-14_00 35 21](https://github.com/vdhamer/SwiftyJSON_demo/assets/13396568/abfdfe64-f706-40a2-ab37-e4357092c72a)
+
 ## Functionality and purpose
 This is __Project 38__ from _Hacking with Swift_ by Paul Hudson.
 
