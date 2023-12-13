@@ -34,12 +34,12 @@ There are minor changes compared to the original source code:
 - one of the filters now finds commits by Doug Gregor instead of Joe Groff. This increases the chance that the filter returns recent records. Joe Groff seems to have switched to other projects.
 - added one line of code that allows the code to run on an iPad. It sets `ac.popoverPresentationController?.sourceItem` to anchor a popup.
 
-The final code changes from the Hacking with Swift Project 38 are included in a separate repository. They add two advanced features that Paul Hudson described as "optional":
-1. adding **Sections** to the UITableView (grouping commits per author). This impacts the CoreData and UIKit part of the code.
-2. the interface CoreData > UITableView **reads records on demand** (lazy loading) rather than loading all records into memory up front.
+The final code changes from the Hacking with Swift Project 38 are included in a separate repository. They consist of two advanced features that Paul Hudson considered "optional":
+1. adding **Sections** to the UITableView (grouping commits by the same author). This impacts the CoreData and UIKit part of the code.
+2. updating the CoreData > UITableView interface to read records **on demand** (lazy loading) rather than loading all records from CoreData into UIKit up front.
 
 The second modification shouldn't be relevant if you plan to use SwiftUI
-because the `List` and `ForEach` views together automatically provide lazy loading.
+because the `List` and `ForEach` views together automatically provide _lazy loading_.
 
 ### Acknowledgments
 
