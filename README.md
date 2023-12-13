@@ -34,3 +34,8 @@ The final code changes from the Hacking with Swift Project 38 are included in a 
 
 The second modification shouldn't be relevant if you plan to use SwiftUI
 because the `List` and `ForEach` views together automatically provide lazy loading.
+
+### Acknowledgments
+
+* Most of the code is from [Project 38]() of Hacking with Swift. I just typed it in and made minor changes.
+* JSON parsing uses the [SwiftyJSON/SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON) package.
