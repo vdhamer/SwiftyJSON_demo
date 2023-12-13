@@ -3,7 +3,7 @@ This is __Project 38__ from _Hacking with Swift_ by Paul Hudson.
 
 Functionally, this demo app loads the 100 most recent commits from a Github repo via a Github API, 
 merges these into a persistent on-device data store and displays this to the user as a scrolling list (with Master/Detail functionality).
-The project was designed by Paul Hudson as a learning excercise only.
+The project was designed by Paul Hudson as a learning excercise only. Because it is a demonstrator, the two screens don't even have a title ;-)
 
 ## Technologies
 Technically the app uses:
@@ -12,7 +12,9 @@ Technically the app uses:
 3. UIKit - the older framework to build the user interface. Somewhat outdatd because Swift projects are migrating to SwiftUI.
 The actual stepwise tutorial for Project 38 assumes that you are already proficient in Swift and are reasonably familiar with SwiftUI.
 
-In my current personal project, I want to combine SwiftyJSON / CoreData / SwiftUI. But I already have the CoreData and SwiftUI working together. So the use of SwiftUI shouldn't be an issue for me.
+In my current personal project, I want to combine SwiftyJSON / CoreData / SwiftUI. But I already have the CoreData and SwiftUI working together. So the use of SwiftUI shouldn't be an issue for me: SwiftUI already displays a sectioned table with data extracted from the CoreData database.
+
+## What I changed
 
 There are minor changes compared to the original source code:
 - made sure it works without warnings on the current version of Swift/Xcode
