@@ -37,5 +37,5 @@ because the `List` and `ForEach` views together automatically provide lazy loadi
 
 ### Acknowledgments
 
-* Most of the code is from [Project 38]() of Hacking with Swift. I just typed it in and made minor changes.
+* Almost all the code is from [Project 38](https://www.hackingwithswift.com/read/38/) of Hacking with Swift. I just typed it in and made minor changes.
 * JSON parsing uses the [SwiftyJSON/SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON) package.
