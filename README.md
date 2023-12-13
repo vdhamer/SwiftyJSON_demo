@@ -2,7 +2,7 @@ This is Project 38 from Hacking with Swift by Paul Hudson.
 
 Functionally, this demo app loads the 100 most recent commits from a Github repo via a Github API, 
 merges these into a persistent on-device data store and displays this to the user as a scrolling list (with Master/Detail functionality).
-But the project was designed by Paul Hudson as a learning excercise in a mix of the following technologies:
+The project was designed by Paul Hudson as a learning excercise in a mix of the following technologies:
 1. SwiftyJSON - used to parse the JSON data format and convert the data into a Swift-friendly format.
 2. CoreData - an abstracted version of SQLite. Somewhat outdated because Swift will gradually migrate to SwiftData.
 3. UIKit - the older framework to build the user interface. Somewhat outdatd because Swift projects are migrating to SwiftUI.
