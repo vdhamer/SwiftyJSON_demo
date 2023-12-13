@@ -28,6 +28,7 @@ There are minor changes compared to the original source code:
 - I installed SwiftJSON as a package rather than copying the Swift source file into the project. This keeps the package up to date.
 - changes to logging to the console and error handling. I deliberately used `fatalError()` instead of `print()` here and there, as this is not meant to be prduction code.
 - one of the filters now finds commits by Doug Gregor instead of Joe Groff. This increases the chance that the filter returns recent records. Joe Groff seems to have switched to other projects.
+- added one line of code that allows the code to run on an iPad (anchoring of popup)
 
 The final code changes from the Hacking with Swift Project 38 are included in a separate repository. They add two advanced features that Paul Hudson described as "optional":
 1. adding **Sections** to the UITableView (grouping commits per author). This impacts the CoreData and UIKit part of the code.
