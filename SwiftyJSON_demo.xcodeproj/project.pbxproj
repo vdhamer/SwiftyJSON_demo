@@ -37,6 +37,7 @@
 		D06798832B29211E005FC0E6 /* Author+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Author+CoreDataClass.swift"; sourceTree = "<group>"; };
 		D06798842B29211E005FC0E6 /* Author+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Author+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		D06798892B2921B5005FC0E6 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		D0C40F392B2BA6120047276B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +55,7 @@
 		D06774AF2B29071200251200 = {
 			isa = PBXGroup;
 			children = (
+				D0C40F392B2BA6120047276B /* README.md */,
 				D06774BA2B29071200251200 /* SwiftyJSON_demo */,
 				D06774B92B29071200251200 /* Products */,
 			);
