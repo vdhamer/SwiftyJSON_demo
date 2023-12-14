@@ -10,6 +10,12 @@ So, because it is a technology demonstrator, both screens don't even have a titl
 
 ![RocketSim_Screenshot_iPhone_SE_(3rd_generation)_2023-12-14_00 35 21](https://github.com/vdhamer/SwiftyJSON_demo/assets/13396568/abfdfe64-f706-40a2-ab37-e4357092c72a)
 
+## Compatibility
+The app runs on iPhone, iPad and on MacOS (in "Designed for iPad" or "Mac Catalyst" modes).
+The app require iOS 16.0, because one line of code (`UIPopoverPresentationControllerDelegate.sourceItem`)
+needs iOS 16.0. If you don't need iPad support and want pre-iOS 16 support, try commenting out that line and changing
+the list of Supported Destinations accordingly.
+
 ## Technologies
 Technically the app uses:
 1. **SwiftyJSON** - used to parse the JSON data format and convert the data into a Swift-friendly format.
