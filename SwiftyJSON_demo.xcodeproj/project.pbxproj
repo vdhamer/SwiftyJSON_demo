@@ -73,11 +73,11 @@
 		D06774BA2B29071200251200 /* SwiftyJSON_demo */ = {
 			isa = PBXGroup;
 			children = (
-				D0C40F412B2BB4880047276B /* SwiftyJSON_demo.entitlements */,
+				D0C40F3B2B2BA7430047276B /* App */,
 				D0C40F402B2BB1070047276B /* CoreData */,
 				D0C40F3F2B2BB0CB0047276B /* ViewControllers */,
 				D0C40F3C2B2BA7770047276B /* Resources */,
-				D0C40F3B2B2BA7430047276B /* App */,
+				D0C40F412B2BB4880047276B /* SwiftyJSON_demo.entitlements */,
 			);
 			path = SwiftyJSON_demo;
 			sourceTree = "<group>";
