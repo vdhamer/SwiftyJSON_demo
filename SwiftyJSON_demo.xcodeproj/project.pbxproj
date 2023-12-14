@@ -30,7 +30,6 @@
 		D06774C22B29071200251200 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D06774C42B29071300251200 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D06774C72B29071300251200 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		D06774C92B29071300251200 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D06774D42B291BC000251200 /* SwiftyJSON_demo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SwiftyJSON_demo.xcdatamodel; sourceTree = "<group>"; };
 		D06798812B29211E005FC0E6 /* Commit+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Commit+CoreDataClass.swift"; sourceTree = "<group>"; };
 		D06798822B29211E005FC0E6 /* Commit+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Commit+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -38,6 +37,7 @@
 		D06798842B29211E005FC0E6 /* Author+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Author+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		D06798892B2921B5005FC0E6 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		D0C40F392B2BA6120047276B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		D0C40F3D2B2BAC5C0047276B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,21 +72,53 @@
 		D06774BA2B29071200251200 /* SwiftyJSON_demo */ = {
 			isa = PBXGroup;
 			children = (
+				D0C40F402B2BB1070047276B /* CoreData */,
+				D0C40F3F2B2BB0CB0047276B /* ViewControllers */,
+				D0C40F3C2B2BA7770047276B /* Resources */,
+				D0C40F3B2B2BA7430047276B /* App */,
+			);
+			path = SwiftyJSON_demo;
+			sourceTree = "<group>";
+		};
+		D0C40F3B2B2BA7430047276B /* App */ = {
+			isa = PBXGroup;
+			children = (
+				D0C40F3D2B2BAC5C0047276B /* Info.plist */,
+				D06774BB2B29071200251200 /* AppDelegate.swift */,
+				D06774BD2B29071200251200 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		D0C40F3C2B2BA7770047276B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D06774C12B29071200251200 /* Main.storyboard */,
+				D06774C62B29071300251200 /* LaunchScreen.storyboard */,
+				D06774C42B29071300251200 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D0C40F3F2B2BB0CB0047276B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
 				D06798892B2921B5005FC0E6 /* DetailViewController.swift */,
+				D06774BF2B29071200251200 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D0C40F402B2BB1070047276B /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
 				D06798832B29211E005FC0E6 /* Author+CoreDataClass.swift */,
 				D06798842B29211E005FC0E6 /* Author+CoreDataProperties.swift */,
 				D06798812B29211E005FC0E6 /* Commit+CoreDataClass.swift */,
 				D06798822B29211E005FC0E6 /* Commit+CoreDataProperties.swift */,
 				D06774D32B291BC000251200 /* SwiftyJSON_demo.xcdatamodeld */,
-				D06774BB2B29071200251200 /* AppDelegate.swift */,
-				D06774BD2B29071200251200 /* SceneDelegate.swift */,
-				D06774BF2B29071200251200 /* ViewController.swift */,
-				D06774C12B29071200251200 /* Main.storyboard */,
-				D06774C42B29071300251200 /* Assets.xcassets */,
-				D06774C62B29071300251200 /* LaunchScreen.storyboard */,
-				D06774C92B29071300251200 /* Info.plist */,
 			);
-			path = SwiftyJSON_demo;
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -350,7 +382,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = YDEWPN9GZ6;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SwiftyJSON_demo/Info.plist;
+				INFOPLIST_FILE = SwiftyJSON_demo/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -363,6 +395,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vdHamer.SwiftyJSON-demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -378,7 +413,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = YDEWPN9GZ6;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SwiftyJSON_demo/Info.plist;
+				INFOPLIST_FILE = SwiftyJSON_demo/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -391,6 +426,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vdHamer.SwiftyJSON-demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
