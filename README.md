@@ -41,8 +41,10 @@ There are only minor changes compared to the original source code. This repo del
 
 ## The "plus" version
 
-The final code changes from the Hacking with Swift Project 38 are included in file `ViewControllerPlus.swift`.
-They consist of two advanced features that Paul Hudson called "optional". Those feataure (by Paul Hudson) are:
+The final code changes from the Hacking with Swift Project 38 are included in file `ViewControllerPlus.swift`. That file is a drop-in
+alternative to the simpler file `ViewController.swift`.
+
+The changes consist of two advanced features that Paul Hudson called "optional". Those feataure are:
 1. added **Sections** to the UITableView (grouping commits by the same author). This impacts the CoreData and UIKit part of the code.
 2. updated the CoreData > UITableView interface to read records **on demand** (lazy loading) rather than loading all records from CoreData into UIKit up front.
 
@@ -54,8 +56,8 @@ file's Target Membership in the File Inspector panel. If both (or neither) files
 error from the compiler.
 
 I realize that the Plus version could have been achieved more elegantly by forking the original repository and 
-making changes to the forked repo. But Github users are normally not allowed to fork repositories that they own. 
-I also looked into having multiple targets within the repository. That could work, but was also not simple enough.
+making the required changes in the forked repo. But Github only allows you to fork repo's owned by someone else. 
+I also looked into having multiple targets within a single Xcode project. That probably could work, but would add complexity.
 
 ### Acknowledgments and licensing
 
