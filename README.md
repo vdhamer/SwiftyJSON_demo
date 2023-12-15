@@ -1,5 +1,5 @@
 ## Functionality and purpose
-This is __Project 38__ from _Hacking with Swift_ by Paul Hudson.
+This is [__Project 38__](https://www.hackingwithswift.com/read/38/) from _Hacking with Swift_ by Paul Hudson.
 
 Functionally, this demo app loads the 100 most recent commits from a Github repo via Github's API. It then 
 merges these entries into a persistent on-device data store and displays the list of commits as a 
