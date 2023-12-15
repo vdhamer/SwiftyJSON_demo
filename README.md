@@ -39,12 +39,23 @@ There are only minor changes compared to the original source code. This repo del
 - One of the projects filters (predicates) now finds commits by Doug Gregor instead of Joe Groff. Joe Groff nowadays appears to work on other projects. So filtering on Doug usually gives non-empty results (the app only loads records from the last few days).
 - I added one line of code that allows the code to run on an iPad. It sets `ac.popoverPresentationController?.sourceItem` to anchor the Filter menu popup.
 
-The final code changes from the Hacking with Swift Project 38 are included in a separate repository. They consist of two advanced features that Paul Hudson called "optional". Those feataure (by Paul Hudson) are:
+## The "plus" version
+
+The final code changes from the Hacking with Swift Project 38 are included in file `ViewControllerPlus.swift`.
+They consist of two advanced features that Paul Hudson called "optional". Those feataure (by Paul Hudson) are:
 1. added **Sections** to the UITableView (grouping commits by the same author). This impacts the CoreData and UIKit part of the code.
 2. updated the CoreData > UITableView interface to read records **on demand** (lazy loading) rather than loading all records from CoreData into UIKit up front.
 
 The latter modification shouldn't be too relevant if you plan to use SwiftUI/CoreData/SwiftyJSON rather than UIKit/CoreData/SwiftyJSON
 because SwiftUI's `List` and `ForEach` views together automatically provide _lazy loading_.
+
+To switch between `ViewController` and `ViewControllerPlus.swift`, select each of the files and enable/disable the 
+file's Target Membership in the File Inspector panel. If both (or neither) files are selected, you will get a built-time
+error from the compiler.
+
+I realize that the Plus version could have been achieved more elegantly by forking the original repository and 
+making changes to the forked repo. But Github users are normally not allowed to fork repositories that they own. 
+I also looked into having multiple targets within the repository. That could work, but was also not simple enough.
 
 ### Acknowledgments and licensing
 

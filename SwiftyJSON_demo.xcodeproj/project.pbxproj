@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		D06774BC2B29071200251200 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06774BB2B29071200251200 /* AppDelegate.swift */; };
 		D06774BE2B29071200251200 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06774BD2B29071200251200 /* SceneDelegate.swift */; };
-		D06774C02B29071200251200 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06774BF2B29071200251200 /* ViewController.swift */; };
 		D06774C32B29071200251200 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D06774C12B29071200251200 /* Main.storyboard */; };
 		D06774C52B29071300251200 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D06774C42B29071300251200 /* Assets.xcassets */; };
 		D06774C82B29071300251200 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D06774C62B29071300251200 /* LaunchScreen.storyboard */; };
@@ -20,6 +19,7 @@
 		D06798872B29211E005FC0E6 /* Author+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06798832B29211E005FC0E6 /* Author+CoreDataClass.swift */; };
 		D06798882B29211E005FC0E6 /* Author+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06798842B29211E005FC0E6 /* Author+CoreDataProperties.swift */; };
 		D067988A2B2921B5005FC0E6 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06798892B2921B5005FC0E6 /* DetailViewController.swift */; };
+		D068C3DE2B2CA3FB00C529CA /* ViewControllerPlus.swift in Sources */ = {isa = PBXBuildFile; fileRef = D068C3DD2B2CA3FB00C529CA /* ViewControllerPlus.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +36,7 @@
 		D06798832B29211E005FC0E6 /* Author+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Author+CoreDataClass.swift"; sourceTree = "<group>"; };
 		D06798842B29211E005FC0E6 /* Author+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Author+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		D06798892B2921B5005FC0E6 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		D068C3DD2B2CA3FB00C529CA /* ViewControllerPlus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerPlus.swift; sourceTree = "<group>"; };
 		D0C40F392B2BA6120047276B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D0C40F3D2B2BAC5C0047276B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0C40F412B2BB4880047276B /* SwiftyJSON_demo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftyJSON_demo.entitlements; sourceTree = "<group>"; };
@@ -105,6 +106,7 @@
 		D0C40F3F2B2BB0CB0047276B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				D068C3DD2B2CA3FB00C529CA /* ViewControllerPlus.swift */,
 				D06774BF2B29071200251200 /* ViewController.swift */,
 				D06798892B2921B5005FC0E6 /* DetailViewController.swift */,
 			);
@@ -222,10 +224,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D068C3DE2B2CA3FB00C529CA /* ViewControllerPlus.swift in Sources */,
 				D067988A2B2921B5005FC0E6 /* DetailViewController.swift in Sources */,
 				D06798882B29211E005FC0E6 /* Author+CoreDataProperties.swift in Sources */,
 				D06774D52B291BC000251200 /* SwiftyJSON_demo.xcdatamodeld in Sources */,
-				D06774C02B29071200251200 /* ViewController.swift in Sources */,
 				D06798852B29211E005FC0E6 /* Commit+CoreDataClass.swift in Sources */,
 				D06774BC2B29071200251200 /* AppDelegate.swift in Sources */,
 				D06798872B29211E005FC0E6 /* Author+CoreDataClass.swift in Sources */,
