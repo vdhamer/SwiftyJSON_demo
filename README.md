@@ -23,7 +23,7 @@ Technically the app uses:
 3. **UIKit** - Apple's original framework to build user interfaces. It is arguably outdated by the newer SwiftUI.
 The Hacking with Swift lessons for Project 38 assume that you are reasonably proficient in Swift and are reasonably familiar with SwiftUI.
 
-For my current personal [project](https://github.com/vdhamer/Photo-Club-Hub), I needed to combine SwiftyJSON, CoreData, and _SwiftUI_ instead of SwiftyJSON, CoreData, and UIKit.
+For my current [personal project](https://github.com/vdhamer/Photo-Club-Hub), I needed to combine SwiftyJSON, CoreData, and _SwiftUI_ instead of SwiftyJSON, CoreData, and UIKit.
 Fortunately I already have the CoreData and SwiftUI working together nicely. 
 So the use of UIKit isn't an issue for me: my SwiftUI code already displays a sectioned table with data fetched from CoreData.
 So I only needed to focus on how to use SwiftJSON to enter data into the CoreData persistent data storage.
