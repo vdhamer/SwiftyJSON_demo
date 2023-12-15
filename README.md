@@ -30,21 +30,21 @@ So I only needed to focus on how to use SwiftJSON to enter data into the CoreDat
 
 ## My code changes
 
-There are minor changes compared to the original source code:
-- I made sure there are no warnings when using the lateset version of Swift/Xcode.
-- I did some renaming (Hacking with Swift sometimes uses short names for practical reasons)
-- I installed SwiftLint 0.53 (with default settings) and fixed the warnings from SwiftLint 
-- I installed SwiftJSON as a package rather than copying the Swift source file into the project. This keeps the package up to date.
-- changes to logging to the console and error handling. I deliberately used `fatalError()` instead of `print()` here and there, as this is not meant to be prduction code. FatalError ensures that that exception, if it would ever occur, gets attention.
-- One of the projects filters (predicates) now finds commits by Doug Gregor instead of Joe Groff. Joe Groff nowadays seem to work on other projects/repos. So filtering on Doug instead of Joe will usually give non-empty results (the app only loads recent records).
-- I added one line of code that allows the code to run on an iPad. It sets `ac.popoverPresentationController?.sourceItem` to anchor a popup.
+There are only minor changes compared to the original source code. This repo deliberately doesn't want to add functionality because Project 38 is an educational vehicle. So here I...
+- ensured there are no warnings when using the lateset version of Swift/Xcode.
+- did some renaming of variables (Hacking with Swift sometimes uses short names for practical reasons)
+- installed SwiftLint 0.53 (with default settings) and fixed the warnings from SwiftLint (mainly about line lengths)
+- installed SwiftJSON as a package rather than copying the Swift source file into the project. This updated SwiftyJSON to the latest version and keeps the package up to date.
+- made changes to logging to the console and error handling. I deliberately used `fatalError()` instead of `print()` here and there, as this is not meant to be production code. FatalError ensures that such exceptions, if there were to show up, get attention.
+- One of the projects filters (predicates) now finds commits by Doug Gregor instead of Joe Groff. Joe Groff nowadays appears to work on other projects. So filtering on Doug usually gives non-empty results (the app only loads records from the last few days).
+- I added one line of code that allows the code to run on an iPad. It sets `ac.popoverPresentationController?.sourceItem` to anchor the Filter menu popup.
 
-The final code changes from the Hacking with Swift Project 38 are included in a separate repository. They consist of two advanced features that Paul Hudson considered "optional":
-1. adding **Sections** to the UITableView (grouping commits by the same author). This impacts the CoreData and UIKit part of the code.
-2. updating the CoreData > UITableView interface to read records **on demand** (lazy loading) rather than loading all records from CoreData into UIKit up front.
+The final code changes from the Hacking with Swift Project 38 are included in a separate repository. They consist of two advanced features that Paul Hudson called "optional". So here Paul..
+1. added **Sections** to the UITableView (grouping commits by the same author). This impacts the CoreData and UIKit part of the code.
+2. updated the CoreData > UITableView interface to read records **on demand** (lazy loading) rather than loading all records from CoreData into UIKit up front.
 
-The second modification shouldn't be relevant if you plan to use SwiftUI
-because the `List` and `ForEach` views together automatically provide _lazy loading_.
+The latter modification shouldn't be relevant if you plan to use SwiftUI/CoreData/SwiftyJSON rather than UIKit/CoreData/SwiftyJSON
+because SwiftUI's `List` and `ForEach` views together automatically provide _lazy loading_.
 
 ### Acknowledgments
 
