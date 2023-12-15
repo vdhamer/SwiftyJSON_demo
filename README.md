@@ -46,7 +46,7 @@ The final code changes from the Hacking with Swift Project 38 are included in a 
 The latter modification shouldn't be relevant if you plan to use SwiftUI/CoreData/SwiftyJSON rather than UIKit/CoreData/SwiftyJSON
 because SwiftUI's `List` and `ForEach` views together automatically provide _lazy loading_.
 
-### Acknowledgments
+### Acknowledgments and licensing
 
 * Almost all the code is from [Project 38](https://www.hackingwithswift.com/read/38/) of Hacking with Swift.
 * JSON parsing uses the [SwiftyJSON/SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON) package.
