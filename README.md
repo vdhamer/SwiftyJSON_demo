@@ -28,17 +28,16 @@ Fortunately I already have the CoreData and SwiftUI working together nicely.
 So the use of UIKit isn't an issue for me: my SwiftUI code already displays a sectioned table with data fetched from CoreData.
 So I only needed to focus on how to use SwiftJSON to enter data into the CoreData persistent data storage.
 
-
 ## My code changes
 
 There are minor changes compared to the original source code:
-- it works without warnings on the current version of Swift/Xcode
+- I made sure there are no warnings when using the lateset version of Swift/Xcode.
 - I did some renaming (Hacking with Swift sometimes uses short names for practical reasons)
 - I installed SwiftLint 0.53 (with default settings) and fixed the warnings from SwiftLint 
 - I installed SwiftJSON as a package rather than copying the Swift source file into the project. This keeps the package up to date.
-- changes to logging to the console and error handling. I deliberately used `fatalError()` instead of `print()` here and there, as this is not meant to be prduction code.
-- one of the filters now finds commits by Doug Gregor instead of Joe Groff. This increases the chance that the filter returns recent records. Joe Groff seems to have switched to other projects.
-- added one line of code that allows the code to run on an iPad. It sets `ac.popoverPresentationController?.sourceItem` to anchor a popup.
+- changes to logging to the console and error handling. I deliberately used `fatalError()` instead of `print()` here and there, as this is not meant to be prduction code. FatalError ensures that that exception, if it would ever occur, gets attention.
+- One of the projects filters (predicates) now finds commits by Doug Gregor instead of Joe Groff. Joe Groff nowadays seem to work on other projects/repos. So filtering on Doug instead of Joe will usually give non-empty results (the app only loads recent records).
+- I added one line of code that allows the code to run on an iPad. It sets `ac.popoverPresentationController?.sourceItem` to anchor a popup.
 
 The final code changes from the Hacking with Swift Project 38 are included in a separate repository. They consist of two advanced features that Paul Hudson considered "optional":
 1. adding **Sections** to the UITableView (grouping commits by the same author). This impacts the CoreData and UIKit part of the code.
